@@ -3,6 +3,7 @@ require "rails_helper"
 RSpec.describe Site, type: :model do
   it { should belong_to(:account) }
   it { should have_many(:pages) }
+  it { should have_many(:api_tokens) }
 
   it "is destroyed when parent account is destroyed" do
     account = Account.create!
